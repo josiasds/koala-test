@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140812171648) do
+ActiveRecord::Schema.define(version: 20140812175004) do
+
+  create_table "authorizations", force: true do |t|
+    t.string   "provider"
+    t.string   "email"
+    t.string   "uid"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "token"
+    t.string   "facebook_post_id"
+    t.datetime "expires_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email"

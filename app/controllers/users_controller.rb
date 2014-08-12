@@ -1,9 +1,20 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  def create_user
+    authorization = Authorization.from_omniauth(env["omniauth.auth"])
+    session[:facebook_authorization_id] = authorization.id
+    redirect_to root_url
+  end
+
   # GET /users
   # GET /users.json
   def index
+    if session[:facebook_authorization_id].present?
+      auth = Authorization.find(session[:facebook_authorization_id])
+      @current_user = User.find_by email: auth.try(:email)
+    end
+
     @users = User.all
   end
 

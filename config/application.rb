@@ -28,5 +28,3 @@ module KoalaTest
     # config.i18n.default_locale = :de
   end
 end
-
-# token = 'CAACEdEose0cBAEiW6HJUcO3aptufzPno2zRD85MVPzWZCAZAb4T6mCZCkI9T56fG4NPrPG3G2LZASJPyJ3MmTz7nGzZBWyt8XXCW9EEPNIXyMGZB5yfDUL7qmNTHcLQ3p6jLxyzsx3Dm3WAwrfPGyf7kEZCnnKOXgOWwGttNEVtaJDA108bMuJA7Asx3TcMcYL4tcDARintxHWh8hBaX4bX'

@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<h2><%= @current_user.try(:first_name) if @current_user.present? %></h2>
 <%= yield %>
 
 </body>
